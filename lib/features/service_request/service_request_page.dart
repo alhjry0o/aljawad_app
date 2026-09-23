@@ -396,36 +396,40 @@ class _ServiceRequestPageState extends ConsumerState<ServiceRequestPage> {
           ],
         );
       case 6:
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(l.customerInfo,
-                style: const TextStyle(fontWeight: FontWeight.w800)),
-            const SizedBox(height: 10),
-            TextField(
-              controller: _name,
-              decoration: InputDecoration(labelText: l.fullName),
-              onChanged: (_) => setState(() {}),
-              errorText: _name.text.isEmpty
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(l.customerInfo,
+          style: const TextStyle(fontWeight: FontWeight.w800)),
+      const SizedBox(height: 10),
+      TextField(
+        controller: _name,
+        decoration: InputDecoration(
+          labelText: l.fullName,
+          errorText: _name.text.isEmpty
+              ? null
+              : Validators.name(_name.text) == null
                   ? null
-                  : Validators.name(_name.text) == null
-                      ? null
-                      : l.invalidName,
-            ),
-            const SizedBox(height: 10),
-            TextField(
-              controller: _phone,
-              keyboardType: TextInputType.phone,
-              decoration: InputDecoration(labelText: l.phone),
-              onChanged: (_) => setState(() {}),
-              errorText: _phone.text.isEmpty
+                  : l.invalidName,
+        ),
+        onChanged: (_) => setState(() {}),
+      ),
+      const SizedBox(height: 10),
+      TextField(
+        controller: _phone,
+        keyboardType: TextInputType.phone,
+        decoration: InputDecoration(
+          labelText: l.phone,
+          errorText: _phone.text.isEmpty
+              ? null
+              : Validators.phone(_phone.text) == null
                   ? null
-                  : Validators.phone(_phone.text) == null
-                      ? null
-                      : l.invalidPhone,
-            ),
-          ],
-        );
+                  : l.invalidPhone,
+        ),
+        onChanged: (_) => setState(() {}),
+      ),
+    ],
+  );
       default:
         return _Review(
           serviceId: _serviceId,
