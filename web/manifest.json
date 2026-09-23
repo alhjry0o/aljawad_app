@@ -1,0 +1,12 @@
+{
+  "name": "الجواد",
+  "short_name": "الجواد",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0B2545",
+  "theme_color": "#0B2545",
+  "description": "شركة الجواد الدولية العربية — تطبيق الخدمات",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": []
+}
