@@ -35,3 +35,10 @@ flutter:
     - assets/images/projects/
     - assets/icons/
     - assets/logo/
+
+ flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: false
+  image_path: "assets/logo/logo.png"
+  min_sdk_android: 26
+  remove_alpha_ios: true
