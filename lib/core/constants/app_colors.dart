@@ -25,7 +25,7 @@ class AppColors {
   static const Color warning = Color(0xFFF59E0B);
   static const Color info = Color(0xFF2563EB);
 
-  // ألوان الأزرار الجديدة
+  
   static const Color greenDeep = Color(0xFF047857);
   static const Color greenBright = Color(0xFF10B981);
   static const Color navyDeep = Color(0xFF061729);
