@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../core/constants/app_assets.dart';
 import '../../core/localization/generated/app_localizations.dart';
+import '../../core/widgets/app_button.dart';
 import '../../core/providers/catalog_providers.dart';
 import '../../core/routing/app_router.dart';
 import '../../core/widgets/empty_state.dart';
@@ -46,26 +47,31 @@ class ServiceDetailsPage extends ConsumerWidget {
           const SizedBox(height: 16),
           _Section(title: l.suitableSites, items: service.sites(isAr)),
           const SizedBox(height: 24),
-          FilledButton(
-            onPressed: () => context.push(
-              '${AppRoutes.serviceRequest}?serviceId=${service.id}',
-            ),
-            child: Text(l.requestService),
-          ),
-          const SizedBox(height: 10),
-          OutlinedButton(
-            onPressed: () => context.push(
-              '${AppRoutes.quotation}?serviceId=${service.id}',
-            ),
-            child: Text(l.requestQuotation),
-          ),
-          const SizedBox(height: 10),
-          OutlinedButton(
-            onPressed: () => context.push(
-              '${AppRoutes.inspection}?serviceId=${service.id}',
-            ),
-            child: Text(l.requestInspection),
-          ),
+          AppButton(
+           label: l.requestService,
+           icon: Icons.arrow_forward_rounded,
+           onPressed: () => context.push(
+             '${AppRoutes.serviceRequest}?serviceId=${service.id}',
+           ),
+         ),
+         const SizedBox(height: 12),
+         AppButton(
+           label: l.requestQuotation,
+           icon: Icons.request_quote_outlined,
+           variant: AppButtonVariant.outline,
+           onPressed: () => context.push(
+             '${AppRoutes.quotation}?serviceId=${service.id}',
+           ),
+         ),
+         const SizedBox(height: 12),
+         AppButton(
+           label: l.requestInspection,
+           icon: Icons.fact_check_outlined,
+           variant: AppButtonVariant.outline,
+           onPressed: () => context.push(
+             '${AppRoutes.inspection}?serviceId=${service.id}',
+           ),
+         ),
         ],
       ),
     );
