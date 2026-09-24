@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
+
 import '../constants/app_colors.dart';
 
-/// أنواع الأزرار في التطبيق
+
 enum AppButtonVariant {
-  /// الزر الرئيسي — تدرّج أخضر مع ظل
+  
   primary,
 
-  /// زر بديل — تدرّج Navy
+  
   secondary,
 
-  /// حدود فقط — للاختيارات
+  
   outline,
 
-  /// نص بدون خلفية — للروابط
+  
   ghost,
 }
 
