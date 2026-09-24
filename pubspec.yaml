@@ -36,7 +36,7 @@ flutter:
     - assets/icons/
     - assets/logo/
 
- flutter_launcher_icons:
+flutter_launcher_icons:
   android: "ic_launcher"
   ios: false
   image_path: "assets/logo/logo.png"
