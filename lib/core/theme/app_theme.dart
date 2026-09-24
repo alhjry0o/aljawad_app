@@ -48,18 +48,32 @@ class AppTheme {
         style: FilledButton.styleFrom(
           backgroundColor: AppColors.green,
           foregroundColor: AppColors.white,
-          minimumSize: const Size.fromHeight(52),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-          textStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
+          minimumSize: const Size.fromHeight(54),
+          shape: RoundedRectangleBorder(
+           borderRadius: BorderRadius.circular(14),
+          ),
+          elevation: 2,
+          shadowColor: AppColors.green.withOpacity(0.32),
+          textStyle: const TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w800,
+            letterSpacing: 0.3,
+          ),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           foregroundColor: AppColors.navy,
-          side: const BorderSide(color: AppColors.navy, width: 1.2),
-          minimumSize: const Size.fromHeight(52),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-          textStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
+          side: const BorderSide(color: AppColors.navy, width: 1.6),
+          minimumSize: const Size.fromHeight(54),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
+          ),
+          textStyle: const TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w800,
+            letterSpacing: 0.3,
+          ),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
