@@ -7,6 +7,7 @@ import '../../core/constants/app_constants.dart';
 import '../../core/localization/generated/app_localizations.dart';
 import '../../core/providers/catalog_providers.dart';
 import '../../core/routing/app_router.dart';
+import '../../core/widgets/app_button.dart';
 import '../../core/widgets/app_logo.dart';
 import '../../core/widgets/demo_banner.dart';
 import '../../core/widgets/section_header.dart';
@@ -297,13 +298,10 @@ class _ContactStrip extends StatelessWidget {
                   color: AppColors.green,
                 )),
             const SizedBox(height: 12),
-            SizedBox(
-              width: double.infinity,
-              child: FilledButton.icon(
-                onPressed: () => context.push(AppRoutes.contact),
-                icon: const Icon(Icons.headset_mic_outlined),
-                label: Text(l.contactUs),
-              ),
+            AppButton(
+             label: l.contactUs,
+             icon: Icons.headset_mic_outlined,
+             onPressed: () => context.push(AppRoutes.contact),
             ),
           ],
         ),
