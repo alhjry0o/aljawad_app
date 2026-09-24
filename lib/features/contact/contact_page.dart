@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../core/constants/app_constants.dart';
 import '../../core/localization/generated/app_localizations.dart';
 import '../../core/utils/launcher.dart';
+import '../../core/widgets/app_button.dart';
 
 class ContactPage extends StatelessWidget {
   const ContactPage({super.key});
@@ -176,12 +177,10 @@ class _ContactFormState extends State<_ContactForm> {
             decoration: InputDecoration(labelText: l.message),
           ),
           const SizedBox(height: 14),
-          SizedBox(
-            width: double.infinity,
-            child: FilledButton(
-              onPressed: _submit,
-              child: Text(l.sendMessage),
-            ),
+          AppButton(
+            label: l.sendMessage,
+            icon: Icons.send_rounded,
+            onPressed: _submit,
           ),
         ],
       ),
